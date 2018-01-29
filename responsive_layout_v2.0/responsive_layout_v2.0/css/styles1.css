@@ -1,0 +1,165 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	background: #111111;
+	color: #999999;
+}
+
+body {
+	font-family: 'Varela Round', sans-serif;
+	line-height: 1.5;
+}
+.wrapper {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+li {
+	list-style: none;
+}
+
+h2 {
+	text-align: center;
+}
+
+img {
+	max-width: 100%;
+}
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+.main-nav a {
+	text-align: center;
+	padding: 10px 15px;
+}
+.nav {
+	text-align: center;
+
+}
+.name,
+.nav li {
+	padding: 2em 10px;
+}
+.nav a:hover {
+	color: #fff;
+}
+
+/* ---- Layout Containers ---- */
+.main-header {
+	padding: 2em;
+}
+.profile-home {
+	display: flex;
+	flex-direction: column-reverse;
+	margin: 1em;
+}
+.profile-image {
+	display: flex;
+	margin: 2em 0;
+}
+.header-image img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+.col {
+	text-align: center;
+	padding: 1em;
+}
+.contact {
+	text-align: center;
+	margin: 1em;
+}
+.contact p {
+	max-width: 350px;
+	margin: 0 auto;
+}
+.footer-mobile ul {
+	display: flex;
+	flex-direction: row;
+
+}
+.footer-nav {
+	display: none;
+}
+/* ================================= 
+  Media Queries
+==================================== */
+@media (min-width: 768px) {
+	.main-nav ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+	.footer-nav,
+	.footer-nav ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+	}
+	.footer-nav li {
+		float: left;
+	}
+	#footer-name {
+		margin-right: auto;
+		padding-top: 1.5em;
+	}
+	.profile {
+		width: 70%;
+		padding: 2em;
+	}
+	.profile-image {
+		margin: 0;
+	}
+    .profile-home {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+	.container {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.container {
+        grid-template-columns: 1fr 1fr;
+    }
+	.footer-mobile {
+		display: none;
+	}
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+	.nav li:hover {
+        transform: scale(1.5);
+        transition: .1s;
+        cursor: pointer;
+	}
+}
+
+@media (min-width: 1024px) {
+	.col {
+		display: inline-block;
+	}
+	.container {
+		width: 90%;
+		max-width: 1150px;
+	}
+	.container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
